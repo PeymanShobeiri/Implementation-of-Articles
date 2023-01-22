@@ -1,0 +1,31 @@
+HEFT: cost=3.32065568E8 time=18582
+PCP(Optimized): cost=3.21433696E8 deadline =18582 time=18582
+PCP(DecreaseCost): cost=3.22019968E8 deadline =18582 time=18582
+PCP(Fair): cost=3.13412256E8 deadline =18582 time=18582
+PCP(RealFair): cost=3.21433728E8 deadline =18582 time=18582
+Yu: cost=3.13552704E8 deadline =18582 time=18582
+
+PCP(Optimized): cost=1.86418912E8 deadline =37164 time=37164
+PCP(DecreaseCost): cost=1.86469312E8 deadline =37164 time=36920
+PCP(Fair): cost=1.79071776E8 deadline =37164 time=37100
+PCP(RealFair): cost=1.86419408E8 deadline =37164 time=37138
+Yu: cost=1.79071712E8 deadline =37164 time=37100
+
+PCP(Optimized): cost=1.4657472E8 deadline =55746 time=55746
+PCP(DecreaseCost): cost=1.466232E8 deadline =55746 time=55719
+PCP(Fair): cost=1.38994336E8 deadline =55746 time=51346
+PCP(RealFair): cost=1.46576992E8 deadline =55746 time=55665
+Yu: cost=1.38994352E8 deadline =55746 time=51346
+
+PCP(Optimized): cost=1.20782752E8 deadline =74328 time=73234
+PCP(DecreaseCost): cost=1.24195264E8 deadline =74328 time=72813
+PCP(Fair): cost=1.07251288E8 deadline =74328 time=73030
+PCP(RealFair): cost=1.2078276E8 deadline =74328 time=73234
+Yu: cost=1.07251264E8 deadline =74328 time=73030
+
+PCP(Optimized): cost=5.3135576E7 deadline =92910 time=92759
+PCP(DecreaseCost): cost=9.8249624E7 deadline =92910 time=88526
+PCP(Fair): cost=7.48538E7 deadline =92910 time=91613
+PCP(RealFair): cost=9.8200056E7 deadline =92910 time=88947
+Yu: cost=7.4853784E7 deadline =92910 time=91613
+
