@@ -1,0 +1,93 @@
+HEFT: cost=20045.002 time=32 NC=22.664108 NM=1
+Cheapest: cost=884.4382 time=662 NC=1 NM=20
+Fastest: cost=20014.0 time=32 NC=22.629055 NM=1.0
+deadline=32
+PCP(Optimized): cost=18331.174 time=32 NC=20.726349 NM=1.0
+PCP(DecreaseCost): cost=18331.174 time=32 NC=20.726349 NM=1.0
+PCP(DecreaseTime): cost=18455.71 time=32 NC=20.867157 NM=1.0
+PCP(DecreaseCost2): cost=18331.174 time=32 NC=20.726349 NM=1.0
+PCP(Fair): cost=18331.174 time=32 NC=20.726349 NM=1.0
+PCP(RealFair): cost=18331.174 time=32 NC=20.726349 NM=1.0
+Yu: cost=18331.174 time=32 NC=20.726349 NM=1.0
+PCP(Cost): cost=19457.9 time=32 NC=22.000294 NM=1.0
+
+deadline=48
+PCP(Optimized): cost=10719.374 time=48 NC=12.119981 NM=1.5
+PCP(DecreaseCost): cost=12060.652 time=48 NC=13.636513 NM=1.5
+PCP(DecreaseTime): cost=12229.803 time=47 NC=13.8277645 NM=1.46875
+PCP(DecreaseCost2): cost=12501.244 time=48 NC=14.134673 NM=1.5
+PCP(Fair): cost=14665.898 time=48 NC=16.582163 NM=1.5
+PCP(RealFair): cost=11563.6045 time=48 NC=13.07452 NM=1.5
+Yu: cost=12927.722 time=51 NC=14.616875 NM=1.59375
+PCP(Cost): cost=14116.069 time=44 NC=15.960493 NM=1.375
+
+deadline=64
+PCP(Optimized): cost=8196.334 time=64 NC=9.267278 NM=2.0
+PCP(DecreaseCost): cost=8212.758 time=64 NC=9.285848 NM=2.0
+PCP(DecreaseTime): cost=9590.953 time=62 NC=10.844119 NM=1.9375
+PCP(DecreaseCost2): cost=8835.817 time=64 NC=9.990316 NM=2.0
+PCP(Fair): cost=11789.704 time=63 NC=13.330162 NM=1.96875
+PCP(RealFair): cost=8820.455 time=64 NC=9.972947 NM=2.0
+Yu: cost=9551.45 time=63 NC=10.799455 NM=1.96875
+PCP(Cost): cost=9969.362 time=59 NC=11.271972 NM=1.84375
+
+deadline=80
+PCP(Optimized): cost=7279.1733 time=80 NC=8.23028 NM=2.5
+PCP(DecreaseCost): cost=7584.8525 time=80 NC=8.575899 NM=2.5
+PCP(DecreaseTime): cost=7990.179 time=79 NC=9.034186 NM=2.46875
+PCP(DecreaseCost2): cost=7546.559 time=80 NC=8.532602 NM=2.5
+PCP(Fair): cost=7848.8047 time=80 NC=8.87434 NM=2.5
+PCP(RealFair): cost=7433.8706 time=80 NC=8.4051895 NM=2.5
+Yu: cost=6933.699 time=83 NC=7.8396654 NM=2.59375
+PCP(Cost): cost=7770.067 time=76 NC=8.785314 NM=2.375
+
+deadline=96
+PCP(Optimized): cost=5337.7236 time=96 NC=6.0351577 NM=3.0
+PCP(DecreaseCost): cost=5975.285 time=96 NC=6.7560234 NM=3.0
+PCP(DecreaseTime): cost=6320.0156 time=93 NC=7.145797 NM=2.90625
+PCP(DecreaseCost2): cost=7604.8467 time=96 NC=8.598506 NM=3.0
+PCP(Fair): cost=8017.264 time=96 NC=9.06481 NM=3.0
+PCP(RealFair): cost=5861.295 time=95 NC=6.627139 NM=2.96875
+Yu: cost=6710.641 time=96 NC=7.587462 NM=3.0
+PCP(Cost): cost=7208.7197 time=92 NC=8.15062 NM=2.875
+
+deadline=112
+PCP(Optimized): cost=3950.8647 time=112 NC=4.4670897 NM=3.5
+PCP(DecreaseCost): cost=6014.492 time=112 NC=6.8003535 NM=3.5
+PCP(DecreaseTime): cost=3987.9253 time=112 NC=4.5089927 NM=3.5
+PCP(DecreaseCost2): cost=6993.2427 time=112 NC=7.9069886 NM=3.5
+PCP(Fair): cost=6535.656 time=112 NC=7.389613 NM=3.5
+PCP(RealFair): cost=5861.819 time=111 NC=6.627732 NM=3.46875
+Yu: cost=5414.1226 time=115 NC=6.1215386 NM=3.59375
+PCP(Cost): cost=5799.835 time=108 NC=6.5576487 NM=3.375
+
+deadline=128
+PCP(Optimized): cost=3734.1938 time=128 NC=4.2221084 NM=4.0
+PCP(DecreaseCost): cost=4780.156 time=128 NC=5.404737 NM=4.0
+PCP(DecreaseTime): cost=3848.698 time=125 NC=4.351574 NM=3.90625
+PCP(DecreaseCost2): cost=6532.8125 time=127 NC=7.3863983 NM=3.96875
+PCP(Fair): cost=6448.1626 time=128 NC=7.290688 NM=4.0
+PCP(RealFair): cost=5235.054 time=127 NC=5.919073 NM=3.96875
+Yu: cost=5176.5205 time=128 NC=5.8528914 NM=4.0
+PCP(Cost): cost=5253.197 time=122 NC=5.939586 NM=3.8125
+
+deadline=144
+PCP(Optimized): cost=2740.4553 time=144 NC=3.0985267 NM=4.5
+PCP(DecreaseCost): cost=4314.248 time=144 NC=4.877953 NM=4.5
+PCP(DecreaseTime): cost=3047.0308 time=142 NC=3.4451597 NM=4.4375
+PCP(DecreaseCost2): cost=5697.333 time=144 NC=6.441754 NM=4.5
+PCP(Fair): cost=5860.284 time=144 NC=6.6259966 NM=4.5
+PCP(RealFair): cost=4350.241 time=143 NC=4.918649 NM=4.46875
+Yu: cost=4143.6157 time=146 NC=4.6850257 NM=4.5625
+PCP(Cost): cost=4826.859 time=139 NC=5.4575424 NM=4.34375
+
+deadline=160
+PCP(Optimized): cost=2613.8066 time=160 NC=2.95533 NM=5.0
+PCP(DecreaseCost): cost=4240.7 time=160 NC=4.7947955 NM=5.0
+PCP(DecreaseTime): cost=2883.2534 time=150 NC=3.259983 NM=4.6875
+PCP(DecreaseCost2): cost=3970.2407 time=159 NC=4.4889975 NM=4.96875
+PCP(Fair): cost=5523.51 time=158 NC=6.2452188 NM=4.9375
+PCP(RealFair): cost=5079.022 time=159 NC=5.7426534 NM=4.96875
+Yu: cost=4074.08 time=158 NC=4.606405 NM=4.9375
+PCP(Cost): cost=4846.385 time=154 NC=5.4796195 NM=4.8125
+

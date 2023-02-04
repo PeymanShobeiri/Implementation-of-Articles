@@ -1,0 +1,94 @@
+<binding xmlns:ns1="http://pegasus.isi.edu/schema/DAX" name="binding" package="edu.isi.pegasus.schema.dax" trim-whitespace="true">
+  <namespace uri="http://pegasus.isi.edu/schema/DAX" default="elements"/>
+  <format label="ns1:TransferType" type="DAG.TransferType" enum-value-method="xmlValue"/>
+  <format label="ns1:FileType" type="DAG.FileType" enum-value-method="xmlValue"/>
+  <format label="ns1:LinkageType" type="DAG.LinkageType" enum-value-method="xmlValue"/>
+  <format label="ns1:ProfileNamespace" type="DAG.ProfileNamespace" enum-value-method="xmlValue"/>
+  <mapping abstract="true" type-name="ns1:PlainFilenameType" class="DAG.PlainFilenameType">
+    <value style="attribute" name="file" get-method="getFile" set-method="setFile"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FilenameType" class="DAG.FilenameType">
+    <structure map-as="ns1:PlainFilenameType"/>
+    <value style="attribute" name="temporaryHint" get-method="getTemporaryHint" set-method="setTemporaryHint" usage="optional"/>
+    <value style="attribute" name="link" get-method="getLink" set-method="setLink" usage="optional" format="ns1:LinkageType"/>
+    <value style="attribute" name="optional" get-method="getOptional" set-method="setOptional" usage="optional"/>
+    <value style="attribute" name="register" get-method="getRegister" set-method="setRegister" usage="optional"/>
+    <value style="attribute" name="transfer" get-method="getTransfer" set-method="setTransfer" usage="optional" format="ns1:TransferType"/>
+    <value style="attribute" name="type" get-method="getType" set-method="setType" usage="optional" format="ns1:FileType"/>
+    <value style="attribute" name="size" get-method="getSize" set-method="setSize" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:StdioType" class="DAG.StdioType">
+    <structure map-as="ns1:PlainFilenameType"/>
+    <value style="attribute" name="varname" get-method="getVarname" set-method="setVarname"/>
+  </mapping>
+  <mapping class="DAG.Adag" name="adag">
+    <collection get-method="getFilenameList" set-method="setFilenameList" usage="optional" create-type="java.util.ArrayList">
+      <structure type="DAG.Adag$Filename" name="filename">
+        <structure map-as="ns1:PlainFilenameType"/>
+        <value style="attribute" name="link" get-method="getLink" set-method="setLink" usage="optional" format="ns1:LinkageType"/>
+        <value style="attribute" name="optional" get-method="getOptional" set-method="setOptional" usage="optional"/>
+      </structure>
+    </collection>
+    <collection get-method="getJobList" set-method="setJobList" create-type="java.util.ArrayList">
+      <structure type="DAG.Adag$Job" name="job">
+        <structure get-method="getArgument" set-method="setArgument" usage="optional" name="argument">
+          <collection get-method="getFilenameList" set-method="setFilenameList" usage="optional" create-type="java.util.ArrayList">
+            <structure map-as="ns1:PlainFilenameType" name="filename"/>
+          </collection>
+        </structure>
+        <collection get-method="getProfileList" set-method="setProfileList" usage="optional" create-type="java.util.ArrayList">
+          <structure type="DAG.Adag$Job$Profile" name="profile">
+            <collection get-method="getFilenameList" set-method="setFilenameList" usage="optional" create-type="java.util.ArrayList">
+              <structure map-as="ns1:PlainFilenameType" name="filename"/>
+            </collection>
+            <value style="attribute" name="key" get-method="getKey" set-method="setKey"/>
+            <value style="attribute" name="namespace" get-method="getNamespace" set-method="setNamespace" format="ns1:ProfileNamespace"/>
+            <value style="attribute" name="origin" get-method="getOrigin" set-method="setOrigin" usage="optional"/>
+          </structure>
+        </collection>
+        <structure get-method="getStdin" set-method="setStdin" usage="optional" name="stdin">
+          <structure map-as="ns1:StdioType"/>
+          <value style="attribute" name="link" get-method="getLink" set-method="setLink" usage="optional" format="ns1:LinkageType"/>
+        </structure>
+        <structure get-method="getStdout" set-method="setStdout" usage="optional" name="stdout">
+          <structure map-as="ns1:StdioType"/>
+          <value style="attribute" name="link" get-method="getLink" set-method="setLink" usage="optional" format="ns1:LinkageType"/>
+        </structure>
+        <structure get-method="getStderr" set-method="setStderr" usage="optional" name="stderr">
+          <structure map-as="ns1:StdioType"/>
+          <value style="attribute" name="link" get-method="getLink" set-method="setLink" usage="optional" format="ns1:LinkageType"/>
+        </structure>
+        <collection get-method="getUseList" set-method="setUseList" usage="optional" create-type="java.util.ArrayList">
+          <structure map-as="ns1:FilenameType" name="uses"/>
+        </collection>
+        <value style="attribute" name="namespace" get-method="getNamespace" set-method="setNamespace" usage="optional"/>
+        <value style="attribute" name="name" get-method="getName" set-method="setName"/>
+        <value style="attribute" name="version" get-method="getVersion" set-method="setVersion" usage="optional"/>
+        <value style="attribute" name="dv-namespace" get-method="getDvNamespace" set-method="setDvNamespace" usage="optional"/>
+        <value style="attribute" name="dv-name" get-method="getDvName" set-method="setDvName" usage="optional"/>
+        <value style="attribute" name="dv-version" get-method="getDvVersion" set-method="setDvVersion" usage="optional"/>
+        <value style="attribute" name="id" get-method="getId" set-method="setId"/>
+        <value style="attribute" name="runtime" get-method="getRuntime" set-method="setRuntime" usage="optional"/>
+        <value style="attribute" name="level" get-method="getLevel" set-method="setLevel" usage="optional"/>
+        <value style="attribute" name="compound" get-method="getCompound" set-method="setCompound" usage="optional"/>
+      </structure>
+    </collection>
+    <collection get-method="getChildList" set-method="setChildList" usage="optional" create-type="java.util.ArrayList">
+      <structure type="DAG.Adag$Child" name="child">
+        <collection get-method="getParentList" set-method="setParentList" create-type="java.util.ArrayList">
+          <structure type="DAG.Adag$Child$Parent" name="parent">
+            <value style="attribute" name="ref" get-method="getRef" set-method="setRef"/>
+          </structure>
+        </collection>
+        <value style="attribute" name="ref" get-method="getRef" set-method="setRef"/>
+      </structure>
+    </collection>
+    <value style="attribute" name="version" get-method="getVersion" set-method="setVersion"/>
+    <value style="attribute" name="name" get-method="getName" set-method="setName"/>
+    <value style="attribute" name="index" get-method="getIndex" set-method="setIndex"/>
+    <value style="attribute" name="count" get-method="getCount" set-method="setCount"/>
+    <value style="attribute" name="jobCount" get-method="getJobCount" set-method="setJobCount" usage="optional"/>
+    <value style="attribute" name="fileCount" get-method="getFileCount" set-method="setFileCount" usage="optional"/>
+    <value style="attribute" name="childCount" get-method="getChildCount" set-method="setChildCount" usage="optional"/>
+  </mapping>
+</binding>
